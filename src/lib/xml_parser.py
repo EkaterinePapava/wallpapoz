@@ -52,8 +52,8 @@ def save_treeview_to_wallpapoz_file(f, type, elements, *, interval, random, styl
         id = 1
         for key, files in elements.items():
             workspace_elem = ElementTree.SubElement(root, "workspace")
-            workspace_elem.set("name", key)
             workspace_elem.set("id", str(id))
+            workspace_elem.set("name", key)
             id += 1
             for file in files:
                 file_elem = ElementTree.SubElement(workspace_elem, "file")
